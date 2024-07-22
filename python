@@ -1,0 +1,17 @@
+import pyttsx3
+
+# Initialize the TTS engine
+engine = pyttsx3.init()
+
+# Set the voice properties
+engine.setProperty('rate', 150)  # Speed percent (can be more than 100)
+engine.setProperty('volume', 0.8)  # Volume 0-1
+
+# Function to speak the text
+def speak(text):
+    engine.say(text)
+    engine.runAndWait()
+
+# Example usage
+text = "Hello, this is a text-to-speech example."
+speak(text)
